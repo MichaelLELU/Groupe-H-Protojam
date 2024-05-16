@@ -62,15 +62,15 @@ export default function HomePage() {
         filteredAceraceae={filteredAceraceae}
         setFilteredAceraceae={setFilteredAceraceae}
       />
-      <div>
-        {filter && <CardFilter filter={filter} />}
-      </div>
       <h2 className="intro">
         Discover botanical diversity with BotanicWorld, our plant directory and
         your source of green inspiration.
       </h2>
-      <SearchBar/>
-      <CardList  data={data} />
+      <SearchBar />
+      <div>
+        {!filter && <CardList data={data} />}
+        {filter && <CardFilter filter={filter} />}
+      </div>
       
     </>
   );

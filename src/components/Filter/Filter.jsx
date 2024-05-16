@@ -35,14 +35,14 @@ export default function Filter({
           type="button"
           onClick={() => setFilteredDroseraceae(!filteredDroseraceae)}
         >
-          Carnivore
+          Carnivorous
         </button>
 
         <button
         className="button"
           type="button"
           onClick={() => setFilteredAceraceae(!filteredAceraceae)}
-        >Erable
+        >Acer
         </button>
         
         </div> 
