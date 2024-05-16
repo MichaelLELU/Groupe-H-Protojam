@@ -3,6 +3,7 @@ import Filter from "../../components/Filter/Filter";
 import { useLoaderData } from "react-router-dom";
 import CardList from "../../components/CardList/CardList";
 import CardFilter from "../../components/CardFilter/CardFilter";
+import SearchBar from "../../components/SearchBar/SearchBar"
 import './Home.css'
 
 export default function HomePage() {
@@ -68,6 +69,7 @@ export default function HomePage() {
         Discover botanical diversity with BotanicWorld, our plant directory and
         your source of green inspiration.
       </h2>
+      <SearchBar/>
       <CardList  data={data} />
       
     </>
