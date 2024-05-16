@@ -31,11 +31,13 @@ export default function Menu() {
       onClick={toggleDrawer(false)}
     >
       <List>
-        {["Home", "About"].map((text) => (
-          <ListItem key={text} disablePadding>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        {[<Link to="/">Home</Link>, <Link to="/about">About</Link>].map(
+          (text) => (
+            <ListItem key={text} disablePadding>
+              <ListItemText primary={text} />
+            </ListItem>
+          )
+        )}
       </List>
       <Divider />
     </Box>
@@ -49,8 +51,8 @@ export default function Menu() {
         {DrawerList}
       </Drawer>
       <div className="desktop">
-        <link to="/">Home</link>
-        <link to="/">About</link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
       </div>
     </>
   );
