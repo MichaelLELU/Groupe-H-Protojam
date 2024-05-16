@@ -30,7 +30,6 @@ export default function SearchBar() {
           Rechercher
         </button>
       </form>
-      <h2 className="searchbar">Votre recherche : {search}</h2>
       <div className="card-container">
         {result &&
           result.data
@@ -38,7 +37,6 @@ export default function SearchBar() {
             .map((d, i) => (
               <Card key={i} image={d.image_url} name={d.common_name} />
             ))}
-        <h2>la limite</h2>
       </div>
     </section>
   );
