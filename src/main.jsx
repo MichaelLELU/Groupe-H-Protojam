@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./pages/HomePage.jsx";
-import DetailPage from "./pages/DetailPage.jsx";
-import AboutPage from "./pages/AboutPage.jsx";
+import HomePage from "./pages/Home/HomePage.jsx";
+import DetailPage from "./pages/Detail/DetailPage.jsx";
+import AboutPage from "./pages/About/AboutPage.jsx";
 
 const router = createBrowserRouter([
   {
