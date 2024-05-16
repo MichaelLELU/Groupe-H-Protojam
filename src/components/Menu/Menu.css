@@ -1,0 +1,22 @@
+#burger {
+  font-size: 2rem;
+  color: #faf8eb;
+}
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #burger {
+    display: none;
+  }
+  .desktop {
+    display: initial;
+  }
+  .desktop > button {
+    background-color: #55996f;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
