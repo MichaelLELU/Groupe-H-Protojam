@@ -31,7 +31,7 @@ export default function Menu() {
       onClick={toggleDrawer(false)}
     >
       <List>
-        {[<Link to="/">Home</Link>, <Link to="/about">About</Link>].map(
+        {[<Link id="drawer" to="/">Home</Link>, <Link id="drawer" to="/about">About</Link>].map(
           (text) => (
             <ListItem key={text} disablePadding>
               <ListItemText primary={text} />
@@ -50,10 +50,7 @@ export default function Menu() {
       <Drawer open={open} onClose={toggleDrawer(false)} anchor="right">
         {DrawerList}
       </Drawer>
-      <div className="desktop">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </div>
+      
     </>
   );
 }
