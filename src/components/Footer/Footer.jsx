@@ -8,13 +8,16 @@ export default function Footer() {
   return (
     <div className="Footer">
       <p className="copy">@2024 copyright</p>
-      <Link to="https://www.instagram.com/">
+      <Link to="https://www.instagram.com/" target="_blanck">
         <img className="LogoInsta" src={instagram} alt="logo d'instagram" />
       </Link>
-      <Link to="https://www.facebook.com/">
+      <Link to="https://www.facebook.com/" target="_blanck">
         <img className="LogoFacebook" src={facebook} alt="logo de facebook" />
       </Link>
-      <Link to="https://github.com/MichaelLELU/Groupe-H-Protojam">
+      <Link
+        to="https://github.com/MichaelLELU/Groupe-H-Protojam"
+        target="_blanck"
+      >
         <img className="LogoGithub" src={github} alt="logo de Github" />
       </Link>
     </div>
