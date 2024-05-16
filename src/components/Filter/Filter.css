@@ -1,0 +1,20 @@
+.filterButton{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+.button: hover {
+    background-color: #faf8eb;
+}
+
+.button{
+    background-color: #55996f;
+    color: #faf8eb; 
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+}
+
