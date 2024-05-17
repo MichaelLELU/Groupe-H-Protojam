@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Filter from "../../components/Filter/Filter";
 import { useLoaderData } from "react-router-dom";
 import CardList from "../../components/CardList/CardList";
-import SearchBar from "../../components/SearchBar/SearchBar"
-import './Home.css'
+import SearchBar from "../../components/SearchBar/SearchBar";
+import "./Home.css";
 
 export default function HomePage() {
   const data = useLoaderData();
@@ -11,7 +11,7 @@ export default function HomePage() {
   const [result, setResult] = useState(data);
   const [filteredExotic, setFilteredExotic] = useState(false);
 
- useEffect(() => {
+  useEffect(() => {
     if (filteredExotic) {
       fetch(`https://wcs-wilders-apis.vercel.app/api/plants/search/giant`)
         .then((res) => res.json())
@@ -19,7 +19,7 @@ export default function HomePage() {
     }
   }, [filteredExotic]);
 
-  const [filteredAbies, setFilteredAbies] = useState(false)
+  const [filteredAbies, setFilteredAbies] = useState(false);
 
   useEffect(() => {
     if (filteredAbies) {
@@ -29,7 +29,7 @@ export default function HomePage() {
     }
   }, [filteredAbies]);
 
-  const [filteredDroseraceae, setFilteredDroseraceae] = useState(false)
+  const [filteredDroseraceae, setFilteredDroseraceae] = useState(false);
 
   useEffect(() => {
     if (filteredDroseraceae) {
@@ -39,7 +39,7 @@ export default function HomePage() {
     }
   }, [filteredDroseraceae]);
 
-  const [filteredAceraceae, setFilteredAceraceae] = useState(false)
+  const [filteredAceraceae, setFilteredAceraceae] = useState(false);
 
   useEffect(() => {
     if (filteredAceraceae) {
@@ -48,7 +48,6 @@ export default function HomePage() {
         .then((response) => setResult(response));
     }
   }, [filteredAceraceae]);
-
 
   const [search, setSearch] = useState(null);
 
@@ -62,25 +61,24 @@ export default function HomePage() {
 
   return (
     <>
-    <Filter
-        setFilteredExotic={setFilteredExotic} 
+      <h2 className="intro">
+        Discover botanical diversity with BotanicWorld, our plant directory and
+        your source of green inspiration.
+      </h2>
+      <SearchBar setSearch={setSearch} />
+      <Filter
+        setFilteredExotic={setFilteredExotic}
         filteredExotic={filteredExotic}
-        setFilteredAbies={setFilteredAbies} 
+        setFilteredAbies={setFilteredAbies}
         filteredAbies={filteredAbies}
         filteredDroseraceae={filteredDroseraceae}
         setFilteredDroseraceae={setFilteredDroseraceae}
         filteredAceraceae={filteredAceraceae}
         setFilteredAceraceae={setFilteredAceraceae}
       />
-      <h2 className="intro">
-        Discover botanical diversity with BotanicWorld, our plant directory and
-        your source of green inspiration.
-      </h2>
-        <SearchBar setSearch={setSearch} />
       <div>
-        <CardList  result={result}/>
+        <CardList result={result} />
       </div>
-      
     </>
   );
 }
