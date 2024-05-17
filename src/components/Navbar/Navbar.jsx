@@ -15,7 +15,7 @@ export default function Navbar() {
       <img className="logo" src={logo} alt="logo BotanicWorld" />
       </button>
       </div>
-      <h1 className="Titre">Botanic World</h1>
+      <h1 className="Titre">BotanicWorld</h1>
       <div className="desktop">
         <Link id="button_home" to="/">
           Home

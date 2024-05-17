@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/detail/:id",
         element: <DetailPage />,
-        loader: ({params }) => fetch(`https://wcs-wilders-apis.vercel.app/api/plants/${params.id}`),
+        loader: ({params} ) => fetch(`https://wcs-wilders-apis.vercel.app/api/plants/${params.id}`),
       },
       {
         path: "/about",

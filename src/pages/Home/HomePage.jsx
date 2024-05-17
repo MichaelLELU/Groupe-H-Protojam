@@ -19,15 +19,15 @@ export default function HomePage() {
     }
   }, [filteredExotic]);
 
-  const [filteredVegetable, setFilteredVegetable] = useState(false)
+  const [filteredAbies, setFilteredAbies] = useState(false)
 
   useEffect(() => {
-    if (filteredVegetable) {
-      fetch(`https://wcs-wilders-apis.vercel.app/api/plants/search/vegetable`)
+    if (filteredAbies) {
+      fetch(`https://wcs-wilders-apis.vercel.app/api/plants/search/abies`)
         .then((res) => res.json())
         .then((response) => setResult(response));
     }
-  }, [filteredVegetable]);
+  }, [filteredAbies]);
 
   const [filteredDroseraceae, setFilteredDroseraceae] = useState(false)
 
@@ -65,8 +65,8 @@ export default function HomePage() {
     <Filter
         setFilteredExotic={setFilteredExotic} 
         filteredExotic={filteredExotic}
-        setFilteredVegetable={setFilteredVegetable} 
-        filteredVegetable={filteredVegetable}
+        setFilteredAbies={setFilteredAbies} 
+        filteredAbies={filteredAbies}
         filteredDroseraceae={filteredDroseraceae}
         setFilteredDroseraceae={setFilteredDroseraceae}
         filteredAceraceae={filteredAceraceae}
