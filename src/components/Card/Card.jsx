@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom"
-import { useDetail } from "../../context/DetailContext";
+
 
 export default function Card ({item}) {
 
-    const { setDetail } = useDetail();
-    console.log(setDetail)
+   
 
     return (
         <div className="card">

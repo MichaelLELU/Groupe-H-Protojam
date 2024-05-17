@@ -26,7 +26,7 @@ export default function Filter({
         className="button"
           type="button"
           onClick={() => setFilteredVegetable(!filteredVegetable)}
-        >Vegetable
+        >Abies
         </button>
         
 
