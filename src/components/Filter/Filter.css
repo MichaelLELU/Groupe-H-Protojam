@@ -1,20 +1,30 @@
-.filterButton{
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 20px;
+.filterButton {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  margin: 2em 0 5em 0;
 }
 
-.button: hover {
-    background-color: #faf8eb;
+:hover.button {
+  background-color: #faf8eb;
+  color: black;
+  border: 1px solid black;
 }
 
-.button{
-    background-color: #55996f;
-    color: #faf8eb; 
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+:focus.button {
+  box-shadow: none;
+  background-color: #faf8eb;
+  color: black;
+  border: 1px solid black;
 }
 
+.button {
+  background-color: #55996f;
+  color: #faf8eb;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
