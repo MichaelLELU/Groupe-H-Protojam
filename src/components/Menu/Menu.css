@@ -1,0 +1,33 @@
+#burger {
+  font-size: 2rem;
+  color: #faf8eb;
+}
+
+.desktop {
+  display: none;
+}
+
+#drawer {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 2rem 0 2rem 0;
+  justify-content: space-around;
+  color: #55996f;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  #burger {
+    display: none;
+  }
+  .desktop {
+    display: initial;
+    display: flex;
+  }
+  .desktop > a {
+    background-color: #55996f;
+    font-size: 20px;
+    margin-right: 20px;
+    margin: 0 20px 0 0;
+  }
+}

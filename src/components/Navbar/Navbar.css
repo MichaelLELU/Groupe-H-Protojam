@@ -1,0 +1,32 @@
+.Menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #55996f;
+}
+
+.logo {
+  width: 80px;
+}
+
+.Titre {
+  display: flex;
+  color: #faf8eb;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  #button_home,
+  #button_about {
+    background: #55996f;
+    display: flex;
+    color: #faf8eb;
+    align-items: center;
+    justify-content: center;
+  }
+  :hover#button_home,
+  :hover#button_about {
+    color: black;
+    transition: 0.3s;
+    transform: scale(5px);
+  }
+}
