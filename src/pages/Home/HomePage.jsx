@@ -2,21 +2,20 @@ import { useEffect, useState } from "react";
 import Filter from "../../components/Filter/Filter";
 import { useLoaderData } from "react-router-dom";
 import CardList from "../../components/CardList/CardList";
-import CardFilter from "../../components/CardFilter/CardFilter";
 import SearchBar from "../../components/SearchBar/SearchBar"
 import './Home.css'
 
 export default function HomePage() {
   const data = useLoaderData();
 
-  const [filter, setFilter] = useState(null);
+  const [result, setResult] = useState(data);
   const [filteredExotic, setFilteredExotic] = useState(false);
 
  useEffect(() => {
     if (filteredExotic) {
       fetch(`https://wcs-wilders-apis.vercel.app/api/plants/search/giant`)
         .then((res) => res.json())
-        .then((response) => setFilter(response));
+        .then((response) => setResult(response));
     }
   }, [filteredExotic]);
 
@@ -26,7 +25,7 @@ export default function HomePage() {
     if (filteredVegetable) {
       fetch(`https://wcs-wilders-apis.vercel.app/api/plants/search/vegetable`)
         .then((res) => res.json())
-        .then((response) => setFilter(response));
+        .then((response) => setResult(response));
     }
   }, [filteredVegetable]);
 
@@ -36,7 +35,7 @@ export default function HomePage() {
     if (filteredDroseraceae) {
       fetch(`https://wcs-wilders-apis.vercel.app/api/plants/search/drosera`)
         .then((res) => res.json())
-        .then((response) => setFilter(response));
+        .then((response) => setResult(response));
     }
   }, [filteredDroseraceae]);
 
@@ -46,9 +45,20 @@ export default function HomePage() {
     if (filteredAceraceae) {
       fetch(`https://wcs-wilders-apis.vercel.app/api/plants/search/acer`)
         .then((res) => res.json())
-        .then((response) => setFilter(response));
+        .then((response) => setResult(response));
     }
   }, [filteredAceraceae]);
+
+
+  const [search, setSearch] = useState(null);
+
+  useEffect(() => {
+    if (search) {
+      fetch(`https://wcs-wilders-apis.vercel.app/api/plants/search/${search}`)
+        .then((res) => res.json())
+        .then((data) => setResult(data));
+    }
+  }, [search]);
 
   return (
     <>
@@ -66,10 +76,9 @@ export default function HomePage() {
         Discover botanical diversity with BotanicWorld, our plant directory and
         your source of green inspiration.
       </h2>
-      <SearchBar />
+        <SearchBar setSearch={setSearch} />
       <div>
-        {!filter && <CardList data={data} />}
-        {filter && <CardFilter filter={filter} />}
+        <CardList  result={result}/>
       </div>
       
     </>

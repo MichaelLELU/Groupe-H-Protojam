@@ -7,6 +7,7 @@ import HomePage from "./pages/Home/HomePage.jsx";
 import DetailPage from "./pages/Detail/DetailPage.jsx";
 import AboutPage from "./pages/About/AboutPage.jsx";
 
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -14,12 +15,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
-        loader: () => fetch("https://wcs-wilders-apis.vercel.app/api/plants"),
+        loader: () => fetch(`https://wcs-wilders-apis.vercel.app/api/plants`),
       },
-
       {
         path: "/detail/:id",
         element: <DetailPage />,
+        loader: ({params }) => fetch(`https://wcs-wilders-apis.vercel.app/api/plants/${params.id}`),
       },
       {
         path: "/about",
