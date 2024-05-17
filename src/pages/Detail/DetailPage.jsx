@@ -14,7 +14,7 @@ export default function DetailPage() {
   return (
     <>
       <button className="back_button" type="button" onClick={handleBack}>
-        Retrun
+        Return
       </button>
       <div className="container_details">
         <img
