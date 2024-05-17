@@ -62,7 +62,7 @@ export default function HomePage() {
   return (
     <>
       <h2 className="intro">
-        Discover botanical diversity with BotanicWorld, our plant directory and
+        Discover botanical diversity with BotanicWorld, our plant herbarium and
         your source of green inspiration.
       </h2>
       <SearchBar setSearch={setSearch} />
