@@ -1,5 +1,6 @@
 # 💫 About:
 
+As part of a ProtoJam organized by the Wild Code School, we had 36 hours to create a website on the theme of nature, working in a team formed on the spot. We decided to create a digital herbarium using the Trefle API. We won the prize for the best features!
 link to: https://groupe-h-protojam.vercel.app/
 
 
